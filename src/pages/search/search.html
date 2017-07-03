@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Search</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+  <ion-item>
+      <button ion-button  (click)="pickCategory('Notebook')" >Notebook</button>
+      <button ion-button  (click)="pickCategory('Car')" >Car</button>
+      <button ion-button  (click)="pickCategory('Book')" >Book</button>
+      </ion-item>
+</ion-list>
+  <ion-list>
+    <ion-item text-wrap *ngFor="let card of cards | async">
+      <ion-card>
+        <div>
+          <img src="assets/img/image.jpg"/>
+        </div>
+          <ion-card-content>
+            <ion-card-title>
+            {{card.name}}
+            </ion-card-title>
+            <p>
+              {{card.description}}
+            </p>
+          </ion-card-content>
+          <ion-row no-padding>
+            <ion-col text-right>
+              <button ion-button clear small color="blue" icon-left>
+                <ion-icon name='share-alt'></ion-icon>
+                <button ion-button clear (click)="addItemPage();" >Continue</button>
+              </button>
+            </ion-col>
+          </ion-row>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <p class="center">Copyright GHStore</p>
+  </ion-toolbar>
+</ion-footer>

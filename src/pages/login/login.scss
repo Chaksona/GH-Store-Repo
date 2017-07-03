@@ -1,0 +1,31 @@
+page-login {
+    .appfont
+    {
+        font-family: 'Dosis', sans-serif;
+    }
+    .scroll-content 
+    {
+        flex-direction: column;
+        text-align: center;
+    }
+    ion-card.card {border-radius: 5px;}
+    .item 
+    {
+        margin-bottom: 10px;
+        border-radius: 4px;
+        box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+    }
+    .center
+    {
+        text-align: center;
+    }
+    .title span{
+        font-size: 30px;
+    }
+  .title
+    { margin-right: 60px;
+        text-align: center;
+       font-family: 'Dosis', sans-serif;
+    }
+
+}

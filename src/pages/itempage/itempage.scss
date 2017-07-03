@@ -1,0 +1,39 @@
+page-itempage {
+    .appfont
+    {
+        font-family: 'Dosis', sans-serif;
+    }
+    .img
+    {
+        
+        
+    }
+    #border{
+        margin-top: 25px;
+        border-radius: 4px;
+        box-shadow: 20px rgba(0, 0, 0, 0.2),8px rgba(0, 0, 0, 0.19) !important;
+    }
+    .scroll-content
+   {
+       text-align: center;
+       align-content: center;
+   }
+     div.polaroid {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+//   text-align: center;
+}
+    .title span {
+         font-size: 30px;
+    }
+   .title
+    {
+         margin-right: 60px;
+        text-align: center;
+        font-family: 'Dosis', sans-serif;
+    }
+    .footer
+    {
+        text-align: center;
+    }
+}

@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home
+      <button ion-button clear (click)="LogoutPage()" class="lol" > Logout</button>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg" padding>
+  <ion-list>
+    <!--<ion-item text-wrap *ngFor="let card of cards | async">-->
+    <ion-item *ngFor="let event of eventList">
+      <ion-card>
+        <div>
+          <img src="file:///storage/emulated/0/Android/data/io.ionic.starter/cache/.Pic.jpg?1497827778111.jpg"/>
+        </div>
+          <ion-card-content>
+            <ion-card-title>
+            <!--{{card.title}}-->
+            {{event?.name}}
+            </ion-card-title>
+            <p>{{event?.imageData}}</p>
+            <p>
+              {{event?.description}}
+            </p>
+          </ion-card-content>
+          <ion-row no-padding>
+            <ion-col text-right>
+              <button ion-button clear small color="blue" icon-left>
+                <ion-icon name='share-alt'></ion-icon>
+                <button ion-button clear  (click)="goToEventDetail(event.id)" >Continue</button>
+              </button>
+            </ion-col>
+          </ion-row>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+  <!--Example how it work and cards in this!!! -->
+    <!--<ion-list>
+      <ion-item *ngFor="let card of cards | async">
+       <p> {{card.title}}</p>
+        <p>{{card.description}}</p>
+      </ion-item>
+    </ion-list>-->
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <p class="center">Copyright GHStore</p>
+  </ion-toolbar>
+</ion-footer>

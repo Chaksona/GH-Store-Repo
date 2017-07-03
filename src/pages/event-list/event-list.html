@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Items</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+      <ion-item *ngFor="let event of eventList" >
+        <p>Name: <strong>{{event?.name}}</strong></p>
+        <p>Description: <strong>{{event?.description}}</strong></p>
+        <p>Price: <strong>$ {{event?.price}}</strong></p>
+        <p>Category: <strong>{{event?.date}}</strong></p>
+      <button ion-button clear (click)="goToEventDetail(event.id)">Continue</button>
+      <button ion-button clear (click)="deleteEvent(event.id)">Delete</button>
+      </ion-item>
+  </ion-list>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <p class="center">Copyright GHStore</p>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>New Item</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label stacked>Item Name</ion-label>
+    <ion-input [(ngModel)]="eventName" type="text" 
+    placeholder="What's your item's name?">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Item Description</ion-label>
+    <ion-input [(ngModel)]="eventDescription" type="textarea"
+    placeholder="What's your item's description?">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+  <span *ngIf="guestPicture">Picture taken!</span>
+<button ion-button color="primary" block (click)="takePicture()">
+  Take a Picture
+</button>
+</ion-item>
+
+
+  <ion-item>
+    <ion-label stacked>Price</ion-label>
+    <ion-input [(ngModel)]="eventPrice" type="number" 
+    placeholder="How much does it cost?">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Category</ion-label>
+    <ion-select [(ngModel)]="eventDate">
+      <ion-option value="Notebook">Notebook</ion-option>
+      <ion-option value="Car">Car</ion-option>
+      <ion-option value="Book" >Book</ion-option>
+   </ion-select>
+    </ion-item>
+
+
+  <button ion-button block 
+    (click)="createEvent(eventName, eventDate, eventPrice, eventDescription)">
+    Create Event
+  </button>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <p class="center">Copyright GHStore</p>
+  </ion-toolbar>
+</ion-footer>

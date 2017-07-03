@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Item Detail</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      {{currentEvent?.name}}
+    </ion-card-header>
+    <ion-card-content>
+      <p>Description: <strong>{{currentEvent?.description}}</strong></p>
+      <p>Price: <strong>${{currentEvent?.price}}</strong></p>
+      <p>Category: <strong>{{currentEvent?.date}}</strong></p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <p class="center">Copyright GHStore</p>
+  </ion-toolbar>
+</ion-footer>

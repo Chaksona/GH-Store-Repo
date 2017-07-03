@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Item Detail</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>
+    {{currentEvent?.name}}
+  </h1>
+    <div class="polaroid" style="width:100%">
+      <img class="img" src="https://s-media-cache-ak0.pinimg.com/originals/aa/32/cc/aa32cc3e156de1cf96211188222ea2cc.jpg"/>
+      <p><strong>Description: </strong>{{currentEvent?.description}}</p>
+      <p><strong>Price: </strong>${{currentEvent?.price}}</p>
+      <p><strong>Category: </strong>{{currentEvent?.date}}</p>
+      <!--<p id="please">{{currentEvent?.userid}}</p>-->
+      <input type="button" onclick="yea();" value=" Info"/>
+    </div>
+  <button ion-button clear (click)="presentAlert()">Contact Seller</button>
+
+<!--<script type="text/javascript">
+  function yea()
+  {
+    comonman();
+  document.write(this.info);
+  document.write("<h1 style='margin-top:25px;'>  Contact Information  </h1>  <div class='polaroid' id='border'style='width:100%'>");
+  document.write("<p><strong>Name: </strong>{{currentEvent?.description}}</p>");
+  document.write(" <p><strong>Number: </strong>Seller Number</p>");   
+  document.write("    <p><strong>Email: </strong>Seller Email</p>");
+  document.write("  </div>");
+  }</script>-->
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <p class="center">Copyright GHStore</p>
+  </ion-toolbar>
+</ion-footer>
